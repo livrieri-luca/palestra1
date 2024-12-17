@@ -1,0 +1,35 @@
+{
+  "gym": {
+    "name": "Palestra Fitness",
+    "location": "Via delle Fitness, 10",
+    "opening_hours": {
+      "monday": "07:00 - 22:00",
+      "tuesday": "07:00 - 22:00",
+      "wednesday": "07:00 - 22:00",
+      "thursday": "07:00 - 22:00",
+      "friday": "07:00 - 22:00",
+      "saturday": "09:00 - 18:00",
+      "sunday": "Closed"
+    }
+  },
+  "exercises": [
+    {
+      "name": "Squat",
+      "category": "Legs",
+      "difficulty": "Intermediate",
+      "duration": "30 minutes"
+    },
+    {
+      "name": "Push-ups",
+      "category": "Chest",
+      "difficulty": "Beginner",
+      "duration": "15 minutes"
+    },
+    {
+      "name": "Deadlift",
+      "category": "Back",
+      "difficulty": "Advanced",
+      "duration": "45 minutes"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<div *ngIf="!loading; else loadingTemplate">
+  <h1>Lista delle Palestre</h1>
+  <ul>
+    <li *ngFor="let gym of gyms">
+      <h3>{{ gym.nome }}</h3>
+      <p>Indirizzo: {{ gym.indirizzo }}</p>
+      <p>Telefono: {{ gym.telefono }}</p>
+    </li>
+  </ul>
+</div>
+
+<ng-template #loadingTemplate>
+  <p>Caricamento dei dati...</p>
+</ng-template>

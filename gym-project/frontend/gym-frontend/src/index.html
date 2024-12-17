@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GymFrontend</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    /* Stile per lo schermo di caricamento */
+    #loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      font-size: 1.5rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Schermo di caricamento visibile prima che Angular carichi -->
+  <div id="loading">Caricamento in corso...</div>
+
+  <!-- Il contenitore dell'app Angular -->
+  <app-root></app-root>
+
+  <script>
+    // Rimuove il caricamento quando Angular è pronto
+    (function() {
+      const appRoot = document.querySelector('app-root');
+      const loadingDiv = document.getElementById('loading');
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (appRoot.innerHTML.trim()) {
+            loadingDiv.style.display = 'none';
+          }
+        });
+      });
+      observer.observe(appRoot, { childList: true });
+    })();
+  </script>
+</body>
+</html>
